@@ -1,6 +1,6 @@
 CC = clang
 CFLAGS = -g -o
-BIN = sqlist llist dllist sqstack lstack squeue lqueue string
+BIN = sqlist llist dllist sqstack lstack squeue lqueue string matrix
 .DEFAULT_GOAL = all
 sqlist: sqlist.c
 	$(CC) sqlist.c $(CFLAGS) sqlist
@@ -18,6 +18,8 @@ lqueue: lqueue.c
 	$(CC) lqueue.c $(CFLAGS) lqueue
 string: string.c
 	$(CC) string.c $(CFLAGS) string
+matrix: matrix.c
+	$(CC) matrix.c $(CFLAGS) matrix
 .PHONY: all
 all: $(BIN)
 .PHONY: clean
